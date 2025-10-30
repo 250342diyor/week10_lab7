@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int prd(int a, int b) {
+    if (b==0)
+        return 0;
+    if (b<0) {
+        return -a+prd(a,b+1);
+    }else {
+        return a+prd(a,b-1);
+    }
+}
+int main() {
+    cout<<prd(-6,5);
+}

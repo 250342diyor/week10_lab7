@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int countnum(int n) {
+    if (n < 0) {
+        return countnum(-n);
+    }
+
+    if (n == 0) {
+        return 0;
+    }
+    return 1 + countnum(n / 10);
+}
+
+int main() {
+    int n;
+    cout << "Enter number: ";
+    cin >> n;
+    cout << "The number of digits is: " << countnum(n) << endl;
+
+    return 0;
+}
